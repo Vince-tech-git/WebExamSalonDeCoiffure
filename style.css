@@ -1,0 +1,95 @@
+/* Reset de base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Corps */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background: green;
+    color: darkred;
+    padding: 20px;
+}
+
+/* En-tête */
+header {
+    background-color: orange;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+
+
+/* Contenu principal */
+main {
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea, button {
+    padding: 10px;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: gray;
+    border-top: 1px solid black;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1600px) {
+    body {
+        background: #f0f0f0;
+    }
+}
+
+@media (max-width: 1024px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    header, footer {
+        text-align: center;
+    }
+
+    form {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
