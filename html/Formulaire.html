@@ -1,50 +1,66 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../css/Formulaire.css" />
 </head>
 <body>
+
 <header>
-  <h1>Contact</h1>
-  <input type="checkbox" id="menu-toggle" class="menu-toggle">
-  <label for="menu-toggle" class="menu-icon">&#9776;</label>
-  <nav>
-    <ul class="menu">
-      <li><a href="acceuil.html">Accueil</a></li>
-      <li><a href="Contenu1.html">Article 1</a></li>
-      <li><a href="Contenu2.html">Article 2</a></li>
-    </ul>
-  </nav>
+  <h1>Formulaire de contact</h1>
+
+  <input type="checkbox" id="menu-toggle" hidden>
+  <label for="menu-toggle" class="menu-btn">☰ Menu</label>
+
+  <div class="menu-popup">
+    <div class="menu-form">
+      <label for="menu-toggle" class="close-btn">✖</label>
+      <ul>
+        <li><a href="Accueil.html">Accueil</a></li>
+        <li><a href="Diaporama.html">Diaporama</a></li>
+        <li><a href="Confort.html">Confort</a></li>
+        <li><a href="Formation.html">Formation</a></li>
+      </ul>
+    </div>
+  </div>
 </header>
 
 <main>
-  <section>
-    <h2>Formulaire de contact</h2>
-    <form action="#" method="post">
-      <label for="nom">Nom :</label>
-      <input type="text" id="nom" name="nom" required>
+  <section class="form-container">
+    <form>
+      <div>
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+      </div>
+      <div>
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required>
+      </div>
+      <div>
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="objet">Objet :</label>
+        <input type="text" id="objet" name="objet">
+      </div>
+      <div>
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
 
-      <label for="prenom">Prénom :</label>
-      <input type="text" id="prenom" name="prenom" required>
-
-      <label for="email">Email :</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="objet">Objet :</label>
-      <input type="text" id="objet" name="objet">
-
-      <label for="message">Message :</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit">Envoyer</button>
+      <div>
+        <button type="submit">Envoyer</button>
+      </div>
     </form>
   </section>
 </main>
+
 <footer>
   <p>&copy; 2025 By Kohnen V</p>
 </footer>
+
 </body>
 </html>
