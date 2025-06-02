@@ -24,7 +24,6 @@ header {
 header h1 {
     font-size: 5rem;
     font-family: "Times New Roman", serif;
-
 }
 
 /* ------------------ ASIDE ------------------ */
@@ -72,8 +71,8 @@ aside a {
     text-align: center;
 }
 
-/* ------------------ MAIN ------------------ */
-main {
+/* ------------------ SECTION ------------------ */
+section.cadre {
     margin-left: 20vh;
     width: calc(100% - 20vh);
     background-image: url("../asset/image/img4.png");
@@ -82,56 +81,46 @@ main {
     background-position: center;
     padding: 20vh 5vh 5vh;
     min-height: 100vh;
-}
-
-/* Section contenant l'historique */
-.cadre {
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 2vh;
     border-radius: 1vh;
     overflow: hidden;
 }
 
 /* Cacher la case à cocher */
-.cadre input[type="checkbox"] {
+section.cadre input[type="checkbox"] {
     display: none;
 }
 
-/* Style du bouton (titre cliquable) */
-.cadre label {
+/* Titre cliquable */
+section.cadre label {
     display: block;
     font-size: 2rem;
     text-align: center;
     cursor: pointer;
     margin-bottom: 1vh;
     background-color: #4a3d29;
-    color: white;
+    color: ivory;
     padding: 0.5vh;
     border-radius: 1vh;
 }
 
-.cadre label:hover {
+section.cadre label:hover {
     background-color: #6c543a;
 }
 
 /* Article masqué par défaut */
 .contenu {
+    background-color: white;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease;
 }
 
 /* Article visible quand la case est cochée */
-.cadre input[type="checkbox"]:checked ~ .contenu {
+section.cadre input[type="checkbox"]:checked ~ .contenu {
     max-height: 70vh;
     overflow-y: auto;
 }
 
-/* Contenu de l'article */
-.contenu p {
-    padding: 1vh;
-    line-height: 1.5;
-}
 
 /* ------------------ FOOTER ------------------ */
 footer {
