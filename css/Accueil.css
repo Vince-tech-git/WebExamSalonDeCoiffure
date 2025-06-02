@@ -1,158 +1,154 @@
+/* Réinitialisation de base */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
-html, body {
-    height: 100%;
+body {
+    min-height: 100vh;
+}
+
+/* ------------------ HEADER ------------------ */
+header {
+    position: fixed;
+    left: 20vh;
+    width: calc(100% - 20vh);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 5rem;
+    font-family: "Times New Roman", serif;
+
+}
+
+/* ------------------ ASIDE ------------------ */
+aside {
+    width: 20vh;
+    background: #4a3d29;
+    height: 100vh;
+    position: fixed;
     display: flex;
     flex-direction: column;
-    font-family: sans-serif;
-    font-size: 150%;
-    background-image: url("../asset/image/salon.png");
+    align-items: center;
+    padding-top: 5vh;
+}
+
+aside div,
+aside a {
+    color: white;
+    margin-top: 3vh;
+    font-size: 130%;
+    text-align: center;
+}
+
+/* Boutons liens */
+.button {
+    padding: 1vh;
+    border-radius: 1vh;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background-color: #8b6f4e;
+}
+
+/* Bloc d'infos ou liens sans bouton */
+.box {
+    padding: 1vh;
+    border-radius: 1vh;
+    display: inline-block;
+}
+
+/* Centrage du texte */
+.center {
+    text-align: center;
+}
+
+/* ------------------ MAIN ------------------ */
+main {
+    margin-left: 20vh;
+    width: calc(100% - 20vh);
+    background-image: url("../asset/image/img4.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding: 20vh 5vh 5vh;
+    min-height: 100vh;
 }
 
-header {
-    position: fixed;
-    width: 100%;
-    color: black;
+/* Section contenant l'historique */
+.cadre {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2vh;
+    border-radius: 1vh;
+    overflow: hidden;
+}
+
+/* Cacher la case à cocher */
+.cadre input[type="checkbox"] {
+    display: none;
+}
+
+/* Style du bouton (titre cliquable) */
+.cadre label {
+    display: block;
+    font-size: 2rem;
     text-align: center;
+    cursor: pointer;
+    margin-bottom: 1vh;
+    background-color: #4a3d29;
+    color: white;
+    padding: 0.5vh;
+    border-radius: 1vh;
 }
 
-h1 {
-    font-size: 300%;
-    font-family: "fantasy", serif;
+.cadre label:hover {
+    background-color: #6c543a;
 }
 
-main {
-    display: flex;
-    flex-direction: row;
-    min-height: 80vh;
-    text-align: center;
-    flex-wrap: wrap;
+/* Article masqué par défaut */
+.contenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
 }
 
-aside {
-    padding-top: 10vh;
-    width: 15%;
-    color: black;
+/* Article visible quand la case est cochée */
+.cadre input[type="checkbox"]:checked ~ .contenu {
+    max-height: 70vh;
+    overflow-y: auto;
 }
 
-aside div {
-    padding-top: 2vh;
+/* Contenu de l'article */
+.contenu p {
+    padding: 1vh;
+    line-height: 1.5;
 }
 
-section {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 30vh;
-}
-
-section div {
-    flex: 0 0 45%;
-}
-
-a {
-    background: gray;
-    color: black;
-    text-decoration: none;
-    border-radius: 50vh;
-    padding: 1vh 2vh;
-    text-align: center;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
+/* ------------------ FOOTER ------------------ */
 footer {
     position: fixed;
     bottom: 0;
-    width: 100%;
-    text-align: center;
+    left: 20vh;
+    width: calc(100% - 20vh);
+    height: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-
-/* ========== MEDIA QUERIES ========== */
-
-/* Mobile : < 600px */
-@media (max-width: 600px) {
-    body, html {
-        width: 100%;
-        font-size: 90%;
-        flex-direction: column;
-    }
-
-    h1 {
-        font-size: 2.2rem ;
-    }
-
-    main {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    aside {
-        width: 30%;
-        text-align: center;
-        font-size: 1.5rem;
-    }
-
-
-    section {
-        padding-top: 0;
-        align-items: center;
-    }
-
-    section div {
-        width: 100%;
-    }
-
-    a {
-        width: 100%;
-    }
-
-    footer {
-        position: fixed;
-        padding: 1vh ;
-        text-align: center;
-    }
-}
-
-/* Petit écran : < 1024px */
-@media (max-width: 1024px) {
-    header h1 {
-        font-size: 3rem;
-    }
-
-    aside {
-        padding-top: 20vh;
-        font-size: 1rem;
-    }
-
-
-    section div {
-
-        flex: 0 0 50%;
-    }
-    footer {
-        font-size: 60%;
-    }
-}
-
-/* Écran moyen : < 1600px */
-@media (max-width: 1600px) {
-    h1 {
-        font-size: 3.5rem;
-    }
-
-    section div {
-        flex: 0 0 45%;
-    }
+footer a {
+    color: white;
+    padding: 0.2vh 0.5vh;
+    border-radius: 0.5vh;
+    text-decoration: none;
+    font-size: 0.9rem;
 }

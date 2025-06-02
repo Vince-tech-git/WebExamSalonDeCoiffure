@@ -1,10 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Diaporama</title>
+    <link rel="stylesheet" href="../css/Diaporama.css" />
 </head>
 <body>
+<header>
+    <h1>Diaporama</h1>
+    <input type="checkbox" id="menu-toggle" hidden>
+    <label for="menu-toggle" class="menu-btn">☰ Menu</label>
+    <div class="menu-popup">
+        <div class="menu-form">
+            <label for="menu-toggle" class="close-btn">✖</label>
+            <ul>
+                <li><a href="Accueil.html">Accueil</a></li>
+                <li><a href="Formulaire.html">Formulaire</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
 
+<main>
+    <!-- Diaporama images -->
+    <section class="picture">
+        <h2>Nos photos</h2>
+        <div class="scroll-wrapper">
+            <div class="defilement">
+                <label class="zoomable">
+                    <input type="checkbox" hidden>
+                    <img src="../asset/image/img1.jpg" alt="Image 1">
+                </label>
+                <label class="zoomable">
+                    <input type="checkbox" hidden>
+                    <img src="../asset/image/img2.jpg" alt="Image 2">
+                </label>
+                <label class="zoomable">
+                    <input type="checkbox" hidden>
+                    <img src="../asset/image/img3webp" alt="Image 3">
+                </label>
+                <label class="zoomable">
+                    <input type="checkbox" hidden>
+                    <img src="../asset/image/img4.png" alt="Image 4">
+                </label>
+                <label class="zoomable">
+                    <input type="checkbox" hidden>
+                    <img src="../asset/image/img5.jpg" alt="Image 5">
+                </label>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diaporama vidéos -->
+    <section class="video">
+        <h2>Nos vidéos</h2>
+        <div class="scroll-wrapper">
+            <div class="defilement">
+                <label class="zoomable-video">
+                    <input type="checkbox" hidden>
+                    <video src="../asset/video/video1.mp4" muted playsinline></video>
+                    <video class="zoomed" src="../asset/video/video1.mp4" autoplay muted loop playsinline></video>
+                </label>
+                <label class="zoomable-video">
+                    <input type="checkbox" hidden>
+                    <video src="../asset/video/video2.mp4" muted playsinline></video>
+                    <video class="zoomed" src="../asset/video/video2.mp4" autoplay muted loop playsinline></video>
+                </label>
+                <label class="zoomable-video">
+                    <input type="checkbox" hidden>
+                    <video src="../asset/video/video3.mp4" muted playsinline></video>
+                    <video class="zoomed" src="../asset/video/video3.mp4" autoplay muted loop playsinline></video>
+                </label>
+                <label class="zoomable-video">
+                    <input type="checkbox" hidden>
+                    <video src="../asset/video/video4.mp4" muted playsinline></video>
+                    <video class="zoomed" src="../asset/video/video4.mp4" autoplay muted loop playsinline></video>
+                </label>
+                <label class="zoomable-video">
+                    <input type="checkbox" hidden>
+                    <video src="../asset/video/video5.mp4" muted playsinline></video>
+                    <video class="zoomed" src="../asset/video/video5.mp4" autoplay muted loop playsinline></video>
+                </label>
+            </div>
+        </div>
+    </section>
+</main>
+
+<audio autoplay loop>
+    <source src="../asset/audio/audio1.mp3" type="audio/mpeg">
+</audio>
+
+<footer>
+    <p>&copy; 2025 By Kohnen V</p>
+</footer>
 </body>
 </html>
