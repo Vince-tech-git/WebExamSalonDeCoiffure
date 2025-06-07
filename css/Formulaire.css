@@ -30,7 +30,7 @@ header {
 }
 
 /* MENU POPUP */
-.menu-btn {
+.bouton {
     position: absolute;
     top: 2vh;
     right: 2vh;
@@ -41,7 +41,7 @@ header {
     border-radius: 5vh;
 }
 
-.menu-popup {
+.popup {
     position: fixed;
     top: 0;
     left: 0;
@@ -52,7 +52,7 @@ header {
     z-index: 999;
 }
 
-.menu-form {
+.form {
     background: ivory;
     width: 80%;
     margin: 20vh auto;
@@ -60,27 +60,27 @@ header {
     border-radius: 1vh;
 }
 
-.menu-form ul {
+.form ul {
     list-style: none;
     padding: 0;
 }
 
-.menu-form ul li {
+.form ul li {
     margin: 2vh 0;
 }
 
-.menu-form ul li a {
+.form ul li a {
     text-decoration: none;
     font-weight: bold;
 }
 
-.close-btn {
+.close {
     font-size: 2vh;
     float: right;
     cursor: pointer;
 }
 
-#menu-toggle:checked + .menu-btn + .menu-popup {
+#menu-toggle:checked + .bouton + .popup {
     display: block;
 }
 
@@ -157,13 +157,13 @@ footer {
         font-size: 2rem;
     }
 
-    .menu-btn {
+    .bouton {
         width: 100%;
         font-size: 1.2rem;
         padding: 2.5rem;
     }
 
-    .menu-form {
+    .form {
         width: 90%;
         margin: 30vh auto;
         font-size: 1rem;
