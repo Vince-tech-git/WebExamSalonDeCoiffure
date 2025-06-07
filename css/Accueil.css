@@ -1,4 +1,6 @@
-/* Réinitialisation de base */
+/* ------------------ RÉINITIALISATION DE BASE ------------------ */
+
+/* Sélecteur universel pour tous les éléments */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,11 +8,15 @@
     font-family: sans-serif;
 }
 
+/* Corps de la page */
 body {
+    color: black;
     min-height: 100vh;
 }
 
-/* ------------------ HEADER ------------------ */
+/* ------------------ EN-TÊTE FIXE ------------------ */
+
+/* En-tête du site */
 header {
     position: fixed;
     left: 20vh;
@@ -21,12 +27,15 @@ header {
     justify-content: center;
 }
 
-header h1 {
+/* Titre dans le header */
+h1 {
     font-size: 5rem;
     font-family: "Times New Roman", serif;
 }
 
-/* ------------------ ASIDE ------------------ */
+/* ------------------ MENU LATÉRAL FIXE ------------------ */
+
+/* Barre latérale */
 aside {
     width: 20vh;
     background: #4a3d29;
@@ -35,9 +44,9 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 5vh;
 }
 
+/* Éléments textuels et liens dans l'aside */
 aside div,
 aside a {
     color: white;
@@ -46,32 +55,35 @@ aside a {
     text-align: center;
 }
 
-/* Boutons liens */
+/* Classe pour les liens-boutons */
 .button {
     padding: 1vh;
     border-radius: 1vh;
     text-decoration: none;
     display: inline-block;
-    transition: background 0.3s;
+    background-color: #4a3d29;
 }
 
+/* Changement de couleur au survol */
 .button:hover {
     background-color: #8b6f4e;
 }
 
-/* Bloc d'infos ou liens sans bouton */
+/* Bloc stylisé mais non cliquable */
 .box {
     padding: 1vh;
     border-radius: 1vh;
     display: inline-block;
 }
 
-/* Centrage du texte */
-.center {
+/* ------------------ SECTION PRINCIPALE ------------------ */
+
+/* Centrer les titres h2 */
+h2 {
     text-align: center;
 }
 
-/* ------------------ SECTION ------------------ */
+/* Section principale contenant le contenu */
 section.cadre {
     margin-left: 20vh;
     width: calc(100% - 20vh);
@@ -79,65 +91,111 @@ section.cadre {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 20vh 5vh 5vh;
+    padding: 20vh 10vh 15vh;
     min-height: 100vh;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 1vh;
+    background-color: ivory;
     overflow: hidden;
 }
 
-/* Cacher la case à cocher */
+/* Case à cocher utilisée pour l’accordéon */
 section.cadre input[type="checkbox"] {
     display: none;
 }
 
-/* Titre cliquable */
+/* Titre cliquable de l’accordéon */
 section.cadre label {
     display: block;
     font-size: 2rem;
     text-align: center;
-    cursor: pointer;
+    cursor: grabbing;
     margin-bottom: 1vh;
     background-color: #4a3d29;
-    color: ivory;
-    padding: 0.5vh;
+    color: white;
+    padding: 1vh;
     border-radius: 1vh;
 }
 
+/* Survol du label */
 section.cadre label:hover {
     background-color: #6c543a;
 }
 
-/* Article masqué par défaut */
+/* Contenu masqué par défaut */
 .contenu {
-    background-color: white;
+    background-color: ivory;
     max-height: 0;
     overflow: hidden;
+    transition: max-height 3s ease;
 }
 
-/* Article visible quand la case est cochée */
+/* Afficher contenu quand case cochée */
 section.cadre input[type="checkbox"]:checked ~ .contenu {
-    max-height: 70vh;
+    max-height: 50vh;
     overflow-y: auto;
 }
 
+/* ------------------ PIED DE PAGE ------------------ */
 
-/* ------------------ FOOTER ------------------ */
+/* Pied de page */
 footer {
     position: fixed;
-    bottom: 0;
+    bottom: 1vh;
     left: 20vh;
     width: calc(100% - 20vh);
-    height: 3vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Liens dans le pied de page */
 footer a {
     color: white;
     padding: 0.2vh 0.5vh;
     border-radius: 0.5vh;
     text-decoration: none;
     font-size: 0.9rem;
+}
+
+/* Responsive */
+
+/* Adaptation du titre h1 sur écrans moyens */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+/* Adaptation du titre h1 sur écrans plus petits */
+@media (max-width: 850px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Adaptation pour petits écrans mobiles */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2rem;
+    }
+    aside {
+        font-size: 0.3rem;
+        width: 10vh;
+    }
+    section.cadre label {
+        font-size: 0.7rem;
+    }
+    section.cadre {
+        margin-left: 10vh;
+        width: calc(100% - 10vh);
+    }
+    section.cadre * {
+        font-size: 0.7rem;
+    }
+    footer {
+        left: 10vh;
+        width: calc(100% - 10vh);
+    }
+    footer a {
+        font-size: 0.5rem;
+    }
 }
