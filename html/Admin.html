@@ -7,32 +7,51 @@
   <link rel="stylesheet" href="../css/Admin.css" />
 </head>
 <body>
+<!-- Header -->
 <header>
   <h1>Admin</h1>
+  <a href="Accueil.html">
+    Accueil
+  </a>
 </header>
+<!-- Main -->
 <main>
   <form class="recherche">
+    <!-- Select -->
     <label>
       Type :
       <select name="media-type">
-        <option value="audio" >Audio</option>
         <option value="image">Image</option>
         <option value="video">Vidéo</option>
       </select>
     </label>
     <label>
       Fichier :
-      <input type="file" name="media-file" accept="audio/*,image/*,video/*" required />
+      <input type="file"
+             name="media-file"
+             accept="
+             image/*,video/*" required />
     </label>
-    <button type="submit">Rechercher</button>
-  </form>
-  <div class="media-item">
+    <button type="submit">Afficher</button>
+  </form >
+  <!-- Affichage -->
+  <div class="media">
+    <p>
+      example seulement
+    </p>
     <div>
-      <video src="../asset/video/video4.mp4" controls></video>
+      <video src="../asset/video/video4.mp4"
+             controls>
+      </video>
     </div>
     <div>
-      <button>Supprimer</button>
-      <button>Ajouter</button>
+      <!-- Bouton ajouter supprimer -->
+      <button>
+        Supprimer
+      </button>
+      <button>
+        Ajouter
+      </button>
     </div>
   </div>
 </main>
