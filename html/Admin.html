@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galerie Média</title>
+  <link rel="stylesheet" href="../css/Admin.css" />
+</head>
+<body>
+<header>
+  <h1>Admin</h1>
+</header>
+<main>
+  <form class="recherche">
+    <label>
+      Type :
+      <select name="media-type">
+        <option value="audio" >Audio</option>
+        <option value="image">Image</option>
+        <option value="video">Vidéo</option>
+      </select>
+    </label>
+    <label>
+      Fichier :
+      <input type="file" name="media-file" accept="audio/*,image/*,video/*" required />
+    </label>
+    <button type="submit">Rechercher</button>
+  </form>
+  <div class="media-item">
+    <div>
+      <video src="../asset/video/video4.mp4" controls></video>
+    </div>
+    <div>
+      <button>Supprimer</button>
+      <button>Ajouter</button>
+    </div>
+  </div>
+</main>
+</body>
+</html>

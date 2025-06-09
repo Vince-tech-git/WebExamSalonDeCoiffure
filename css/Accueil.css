@@ -1,0 +1,201 @@
+/* ------------------ RÉINITIALISATION DE BASE ------------------ */
+
+/* Sélecteur universel pour tous les éléments */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Corps de la page */
+body {
+    color: black;
+    min-height: 100vh;
+}
+
+/* ------------------ EN-TÊTE FIXE ------------------ */
+
+/* En-tête du site */
+header {
+    position: fixed;
+    left: 20vh;
+    width: calc(100% - 20vh);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Titre dans le header */
+h1 {
+    font-size: 5rem;
+    font-family: "Times New Roman", serif;
+}
+
+/* ------------------ MENU LATÉRAL FIXE ------------------ */
+
+/* Barre latérale */
+aside {
+    width: 20vh;
+    background: #4a3d29;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Éléments textuels et liens dans l'aside */
+aside div,
+aside a {
+    color: white;
+    margin-top: 3vh;
+    font-size: 130%;
+    text-align: center;
+}
+
+/* Classe pour les liens-boutons */
+.button {
+    padding: 1vh;
+    border-radius: 1vh;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #4a3d29;
+}
+
+/* Changement de couleur au survol */
+.button:hover {
+    background-color: #8b6f4e;
+}
+
+/* Bloc stylisé mais non cliquable */
+.box {
+    padding: 1vh;
+    border-radius: 1vh;
+    display: inline-block;
+}
+
+/* ------------------ SECTION PRINCIPALE ------------------ */
+
+/* Centrer les titres h2 */
+h2 {
+    text-align: center;
+}
+
+/* Section principale contenant le contenu */
+section.cadre {
+    margin-left: 20vh;
+    width: calc(100% - 20vh);
+    background-image: url("../asset/image/img4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20vh 10vh 15vh;
+    min-height: 100vh;
+    background-color: ivory;
+    overflow: hidden;
+}
+
+/* Case à cocher utilisée pour l’accordéon */
+section.cadre input[type="checkbox"] {
+    display: none;
+}
+
+/* Titre cliquable de l’accordéon */
+section.cadre label {
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    cursor: grabbing;
+    margin-bottom: 1vh;
+    background-color: #4a3d29;
+    color: white;
+    padding: 1vh;
+    border-radius: 1vh;
+}
+
+/* Survol du label */
+section.cadre label:hover {
+    background-color: #6c543a;
+}
+
+/* Contenu masqué par défaut */
+.contenu {
+    background-color: ivory;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 3s ease;
+}
+
+/* Afficher contenu quand case cochée */
+section.cadre input[type="checkbox"]:checked ~ .contenu {
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+/* ------------------ PIED DE PAGE ------------------ */
+
+/* Pied de page */
+footer {
+    position: fixed;
+    bottom: 1vh;
+    left: 20vh;
+    width: calc(100% - 20vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Liens dans le pied de page */
+footer a {
+    color: white;
+    padding: 0.2vh 0.5vh;
+    border-radius: 0.5vh;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+
+/* Adaptation du titre h1 sur écrans moyens */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+/* Adaptation du titre h1 sur écrans plus petits */
+@media (max-width: 850px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Adaptation pour petits écrans mobiles */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2rem;
+    }
+    aside {
+        font-size: 0.3rem;
+        width: 10vh;
+    }
+    section.cadre label {
+        font-size: 0.7rem;
+    }
+    section.cadre {
+        margin-left: 10vh;
+        width: calc(100% - 10vh);
+    }
+    section.cadre * {
+        font-size: 0.7rem;
+    }
+    footer {
+        left: 10vh;
+        width: calc(100% - 10vh);
+    }
+    footer a {
+        font-size: 0.5rem;
+    }
+}
