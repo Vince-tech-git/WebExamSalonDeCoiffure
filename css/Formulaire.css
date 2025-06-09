@@ -55,6 +55,7 @@ header {
 /* === Contenu du menu (fond clair) === */
 .menu-form {
     background-color: ivory;
+    margin-top: 30vh;
     padding: 3vh;
     border-radius: 2vh;
 }
