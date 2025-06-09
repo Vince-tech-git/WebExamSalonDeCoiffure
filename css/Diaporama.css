@@ -56,7 +56,7 @@ header {
 }
 
 /* Conteneur de formulaire dans la popup */
-.form {
+.menu-form {
     background: ivory; /* Fond ivoire */
     width: 30vh; /* Largeur fixe relative à la hauteur de la fenêtre */
     margin: 20vh auto; /* Marges verticales pour centrer */
@@ -65,18 +65,18 @@ header {
 }
 
 /* Liste non stylisée pour les liens du menu */
-.form ul {
+.menu-form ul {
     list-style: none; /* Supprime les puces */
     padding: 0; /* Supprime le padding par défaut */
 }
 
 /* Espacement vertical entre les éléments de la liste */
-.form ul li {
+.menu-form ul li {
     margin: 2vh 0; /* Marges verticales */
 }
 
 /* Style des liens dans la liste */
-.form ul li a {
+.menu-form ul li a {
     text-decoration: none; /* Supprime le soulignement */
     font-weight: bold; /* Texte en gras */
     color: black; /* Couleur noire */
@@ -257,7 +257,7 @@ footer {
         padding: 2.5rem; /* Plus grand padding pour toucher */
     }
 
-    .form {
+    .menu-form {
         margin: 30vh auto; /* Plus grande marge verticale */
         font-size: 1rem; /* Taille de police normale */
     }
