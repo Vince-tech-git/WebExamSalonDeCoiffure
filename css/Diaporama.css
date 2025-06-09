@@ -17,7 +17,7 @@ body {
 
 /* Style pour tous les titres h1 */
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
 }
 
@@ -108,7 +108,7 @@ main {
     position: relative;
     width: 90%;
     max-width: 100%;
-    height: 40vh;
+    height: 35vh;
     margin: 2vh auto;
     overflow: hidden;
     border-radius: 1vh;
@@ -147,21 +147,12 @@ main {
     scroll-snap-align: center;
 }
 
-/* Barre de défilement personnalisée pour Webkit */
-.scroll::-webkit-scrollbar {
-    height: 2vh;
-}
-
-/* Style du pouce de la barre de défilement */
-.scroll::-webkit-scrollbar-thumb {
-    background: black;
-    border-radius: 1vh;
-}
-
-/* Styles pour scrollbar dans IE/Edge et Firefox */
+/* Barre de défilement compatible multi-navigateurs */
 .scroll {
-    -ms-overflow-style: auto;
-    scrollbar-width: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+
 }
 
 /* background pour effet zoom */
