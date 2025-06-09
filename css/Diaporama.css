@@ -1,264 +1,526 @@
 /* RESET + BASE */
 /* Applique une remise à zéro des marges et des paddings pour tous les éléments */
 * {
-    margin: 0; /* Supprime toutes les marges par défaut */
-    padding: 0; /* Supprime tous les paddings par défaut */
-    box-sizing: border-box; /* Inclut le padding et la bordure dans la taille totale */
-    text-align: center; /* Centre le texte horizontalement par défaut */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 /* Style principal du corps de la page */
 body {
-    font-family: sans-serif; /* Définit la police sans-serif pour tout le texte */
-    background-color: #6c543a; /* Couleur de fond marron clair */
-    color: black; /* Couleur du texte en noir */
-    padding-top: 15vh; /* Espace en haut pour laisser place au header fixe */
-    padding-bottom: 3vh; /* Espace en bas sous le contenu */
+    font-family: sans-serif;
+    background-color: #6c543a;
+    color: black;
+    padding-top: 15vh;
+    padding-bottom: 3vh;
 }
 
 /* Style pour tous les titres h1 */
 h1 {
-    font-size: 3rem; /* Taille de police grande pour le titre principal */
-    margin-bottom: 1rem; /* Marge inférieure pour espacer du contenu suivant */
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 /* Styles du header (en-tête fixe) */
 header {
-    position: fixed; /* Fixe le header en haut de la page */
-    top: 0; /* Positionné tout en haut */
-    width: 100%; /* Largeur pleine de la fenêtre */
-    padding: 1vh; /* Espacement interne vertical */
-    z-index: 1000; /* Priorité d'affichage au-dessus des autres éléments */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1vh;
+    z-index: 1000;
 }
 
 /* Bouton pour ouvrir le menu */
 .bouton {
-    position: absolute; /* Positionné par rapport au header */
-    top: 2vh; /* Distance du haut */
-    right: 2vh; /* Distance de la droite */
-    color: black; /* Couleur du texte noir */
-    padding: 1vh 1vh; /* Padding interne vertical et horizontal */
-    font-size: 1.5rem; /* Taille de la police */
-    border-radius: 5vh; /* Bords arrondis en forme de cercle */
-    cursor: pointer; /* Curseur pointeur au survol */
+    position: absolute;
+    top: 2vh;
+    right: 2vh;
+    color: black;
+    padding: 1vh 1vh;
+    font-size: 1.5rem;
+    border-radius: 5vh;
+    cursor: pointer;
 }
 
 /* Fond semi-transparent pour la popup de menu */
 .popup {
-    position: fixed; /* Couche au-dessus avec position fixe */
-    top: 0; /* En haut */
-    left: 0; /* À gauche */
-    width: 100%; /* Largeur pleine */
-    height: 100%; /* Hauteur pleine */
-    background: rgba(255, 255, 255, 0.8); /* Fond blanc translucide */
-    display: none; /* Caché par défaut */
-    z-index: 900; /* Sous le header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: none;
+    z-index: 900;
 }
 
 /* Conteneur de formulaire dans la popup */
 .menu-form {
-    background: ivory; /* Fond ivoire */
-    width: 30vh; /* Largeur fixe relative à la hauteur de la fenêtre */
-    margin: 20vh auto; /* Marges verticales pour centrer */
-    padding: 2vh; /* Padding interne */
-    border-radius: 1vh; /* Bords arrondis */
+    background: ivory;
+    width: 30vh;
+    margin: 20vh auto;
+    padding: 2vh;
+    border-radius: 1vh;
+}
+/* RESET + BASE */
+/* Applique une remise à zéro des marges et des paddings pour tous les éléments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Style principal du corps de la page */
+body {
+    font-family: sans-serif;
+    background-color: #6c543a;
+    color: black;
+    padding-top: 15vh;
+    padding-bottom: 3vh;
+}
+
+/* Style pour tous les titres h1 */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Styles du header (en-tête fixe) */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1vh;
+    z-index: 1000;
+}
+
+/* Bouton pour ouvrir le menu */
+.bouton {
+    position: absolute;
+    top: 2vh;
+    right: 2vh;
+    color: black;
+    padding: 1vh 1vh;
+    font-size: 1.5rem;
+    border-radius: 5vh;
+    cursor: pointer;
+}
+
+/* Fond semi-transparent pour la popup de menu */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: none;
+    z-index: 900;
+}
+
+/* Conteneur de formulaire dans la popup */
+.form {
+    background: ivory;
+    width: 30vh;
+    margin: 20vh auto;
+    padding: 2vh;
+    border-radius: 1vh;
 }
 
 /* Liste non stylisée pour les liens du menu */
-.menu-form ul {
-    list-style: none; /* Supprime les puces */
-    padding: 0; /* Supprime le padding par défaut */
-}
+.form ul {
+    list-style: none;
+    padding: 0;
 
 /* Espacement vertical entre les éléments de la liste */
-.menu-form ul li {
-    margin: 2vh 0; /* Marges verticales */
+.form ul li {
+    margin: 2vh 0;
 }
 
 /* Style des liens dans la liste */
-.menu-form ul li a {
-    text-decoration: none; /* Supprime le soulignement */
-    font-weight: bold; /* Texte en gras */
-    color: black; /* Couleur noire */
+.form ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
 }
 
 /* Style pour le bouton de fermeture */
 .close {
-    font-size: 2vh; /* Taille de la police */
-    float: right; /* Aligné à droite */
-    cursor: pointer; /* Curseur pointeur */
+    font-size: 2vh;
+    float: right;
+    cursor: pointer;
 }
 
 /* Affiche la popup quand la checkbox #menu-toggle est cochée */
 #menu-toggle:checked + .bouton + .popup {
-    display: block; /* Affiche la popup */
+    display: block;
 }
 
 /* Style du contenu principal (main) */
 main {
-    display: flex; /* Utilise flexbox */
-    flex-direction: column; /* Colonne verticale */
-    align-items: center; /* Centre horizontalement */
-    width: 100%; /* Largeur pleine */
-    height: 80vh; /* Hauteur 80% de la fenêtre */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
 }
 
 /* Styles communes pour sections image et vidéo */
 .picture,
 .video {
-    position: relative; /* Position relative pour éléments enfants */
-    width: 90%; /* Largeur à 90% du conteneur parent */
-    max-width: 100%; /* Ne dépasse pas 100% */
-    height: 40vh; /* Hauteur fixe 40% de la hauteur de la fenêtre */
-    margin: 2vh auto; /* Marges verticales et centrage horizontal */
-    overflow: hidden; /* Cache le débordement */
-    border-radius: 1vh; /* Bords arrondis */
-    background-color: ivory; /* Fond ivoire */
-    display: flex; /* Utilisation de flexbox */
-    flex-direction: column; /* Orientation verticale */
-    align-items: center; /* Centre horizontalement */
+    position: relative;
+    width: 90%;
+    max-width: 100%;
+    height: 40vh;
+    margin: 2vh auto;
+    overflow: hidden;
+    border-radius: 1vh;
+    background-color: ivory;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Conteneur défilable horizontal */
 .scroll {
-    width: 100%; /* Largeur pleine */
-    height: 100%; /* Hauteur pleine */
-    overflow-x: auto; /* Défilement horizontal activé */
-    overflow-y: hidden; /* Pas de défilement vertical */
-    scroll-behavior: smooth; /* Défilement fluide */
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
 }
 
 /* Conteneur des images ou vidéos à défiler */
 .defilement {
-    display: flex; /* Affiche en ligne avec flexbox */
-    gap: 2vw; /* Espacement horizontal entre éléments */
-    padding: 1vh; /* Padding interne */
-    height: 100%; /* Hauteur pleine */
-    scroll-snap-type: x mandatory; /* Snap horizontal obligatoire */
+    display: flex;
+    gap: 2vw;
+    padding: 1vh;
+    height: 100%;
+    scroll-snap-type: x mandatory;
 }
 
 /* Miniatures images et vidéos */
 .defilement img,
 .defilement video:not(.zoomed) {
-    flex: 0 0 auto; /* Pas de flex-grow, pas de shrink, taille auto */
-    height: 100%; /* Hauteur pleine */
-    width: auto; /* Largeur automatique */
-    object-fit: cover; /* Recadrage de l'image/vidéo */
-    border-radius: 1vh; /* Bords arrondis */
-    scroll-snap-align: center; /* Alignement du snap au centre */
+    flex: 0 0 auto;
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    border-radius: 1vh;
+    scroll-snap-align: center;
 }
 
 /* Barre de défilement personnalisée pour Webkit */
 .scroll::-webkit-scrollbar {
-    height: 2vh; /* Hauteur de la barre de scroll */
+    height: 2vh;
 }
 
 /* Style du pouce de la barre de défilement */
 .scroll::-webkit-scrollbar-thumb {
-    background: black; /* Couleur noire */
-    border-radius: 1vh; /* Bords arrondis */
+    background: black;
+    border-radius: 1vh;
 }
 
 /* Styles pour scrollbar dans IE/Edge et Firefox */
 .scroll {
-    -ms-overflow-style: auto; /* Style scrollbar IE */
-    scrollbar-width: auto; /* Style scrollbar Firefox */
+    -ms-overflow-style: auto;
+    scrollbar-width: auto;
 }
 
 /* background pour effet zoom */
 .zoom-background {
-    display: none; /* Caché par défaut */
-    position: fixed; /* Position fixe pleine page */
-    top: 0; /* En haut */
-    left: 0; /* À gauche */
-    width: 100vw; /* Largeur de la fenêtre */
-    height: 100vh; /* Hauteur de la fenêtre */
-    background-color: rgba(255,255,255, 0.9); /* Fond noir semi-transparent */
-    z-index: 1999; /* Au-dessus de presque tout */
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255,255,255, 0.9);
+    z-index: 1999;
 }
 
 /* Affiche le background quand l'image ou la vidéo est zoomée */
 .zoom-picture input:checked ~ .zoom-background,
 .zoom-video input:checked ~ .zoom-background {
-    display: block; /* Affiche le background */
+    display: block;
 }
 
 /* Style du conteneur zoom image */
 .zoom-picture {
-    position: relative; /* Position relative */
-    cursor: zoom-in; /* Curseur loupe (+) */
+    position: relative;
+    cursor: zoom-in;
 }
 
 /* Style image zoomée quand checkbox cochée */
 .zoom-picture input:checked + .zoom-background + img {
-    position: fixed; /* Position fixe sur la page */
-    top: 50%; /* Centre verticalement */
-    left: 50%; /* Centre horizontalement */
-    transform: translate(-50%, -50%); /* Ajuste la position au centre exact */
-    width: 90vw; /* Largeur 90% de la largeur de la fenêtre */
-    height: auto; /* Hauteur automatique */
-    max-height: 90vh; /* Hauteur max 90% de la fenêtre */
-    z-index: 2000; /* Au-dessus de le background */
-    border-radius: 1vh; /* Bords arrondis */
-    background: white; /* Fond blanc */
-    cursor: zoom-out; /* Curseur loupe (-) */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    height: auto;
+    max-height: 90vh;
+    z-index: 2000;
+    border-radius: 1vh;
+    background: white;
+    cursor: zoom-out;
 }
 
 /* Miniatures vidéo sticky en haut */
 .zoom-video video:not(.zoomed) {
-    position: sticky; /* Fixe la miniature lors du scroll */
-    top: 0; /* Collé en haut */
-    cursor: zoom-in; /* Curseur loupe (+) */
+    position: sticky;
+    top: 0;
+    cursor: zoom-in;
 }
 
 /* Style vidéo zoomée */
 .zoomed {
-    display: none; /* Cachée par défaut */
-    position: fixed; /* Position fixe */
-    top: 50%; /* Centre vertical */
-    left: 50%; /* Centre horizontal */
-    transform: translate(-50%, -50%); /* Centre exact */
-    width: 90vw; /* Largeur 90% */
-    max-height: 90vh; /* Hauteur max 90% */
-    border-radius: 1vh; /* Bords arrondis */
-    z-index: 2000; /* Au-dessus */
-    cursor: zoom-out; /* Curseur loupe (-) */
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-height: 90vh;
+    border-radius: 1vh;
+    z-index: 2000;
+    cursor: zoom-out;
 }
 
 /* Affiche la vidéo zoomée quand la checkbox est cochée */
 .zoom-video input:checked ~ .zoomed {
-    display: block; /* Affiche la vidéo agrandie */
+    display: block;
 }
 
 /* Cache la miniature vidéo quand zoom activé */
 .zoom-video input:checked video:not(.zoomed) {
-    display: none; /* Cache la miniature */
+    display: none;
 }
 
 /* Style du footer */
 footer {
-    position: fixed; /* Fixe en bas */
-    bottom: 0; /* Collé en bas */
-    width: 100%; /* Largeur pleine */
-    text-align: center; /* Texte centré */
-    padding: 1vh; /* Padding vertical */
-    font-size: 0.8rem; /* Taille de police plus petite */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1vh;
+    font-size: 0.8rem;
 }
 
 /* Responsive : styles pour petits écrans */
 @media (max-width: 800px) {
     h1 {
-        font-size: 2rem; /* Taille réduite pour titre */
+        font-size: 2rem;
     }
 
     .bouton {
-        width: 100%; /* Bouton en largeur pleine */
-        font-size: 1.2rem; /* Taille de police réduite */
-        padding: 2.5rem; /* Plus grand padding pour toucher */
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 2.5rem;
+    }
+
+    .form {
+        margin: 30vh auto;
+        font-size: 1rem;
+    }
+}
+/* Liste non stylisée pour les liens du menu */
+.menu-form ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Espacement vertical entre les éléments de la liste */
+.menu-form ul li {
+    margin: 2vh 0;
+}
+
+/* Style des liens dans la liste */
+.menu-form ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+/* Style pour le bouton de fermeture */
+.close {
+    font-size: 2vh;
+    float: right;
+    cursor: pointer;
+}
+
+/* Affiche la popup quand la checkbox #menu-toggle est cochée */
+#menu-toggle:checked + .bouton + .popup {
+    display: block;
+}
+
+/* Style du contenu principal (main) */
+main {
+    display: flex; /* Utilise flexbox */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+}
+
+/* Styles communes pour sections image et vidéo */
+.picture,
+.video {
+    position: relative;
+    width: 90%;
+    max-width: 100%;
+    height: 40vh;
+    margin: 2vh auto;
+    overflow: hidden;
+    border-radius: 1vh;
+    background-color: ivory;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Conteneur défilable horizontal */
+.scroll {
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Conteneur des images ou vidéos à défiler */
+.defilement {
+    display: flex;
+    gap: 2vw;
+    padding: 1vh;
+    height: 100%;
+    scroll-snap-type: x mandatory;
+}
+
+/* Miniatures images et vidéos */
+.defilement img,
+.defilement video:not(.zoomed) {
+    flex: 0 0 auto;
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    border-radius: 1vh;
+    scroll-snap-align: center;
+}
+
+/* Barre de défilement personnalisée pour Webkit */
+.scroll::-webkit-scrollbar {
+    height: 2vh;
+}
+
+/* Style du pouce de la barre de défilement */
+.scroll::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 1vh;
+}
+
+/* Styles pour scrollbar dans IE/Edge et Firefox */
+.scroll {
+    -ms-overflow-style: auto;
+    scrollbar-width: auto;
+}
+
+/* background pour effet zoom */
+.zoom-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255,255,255, 0.9);
+    z-index: 1999;
+}
+
+/* Affiche le background quand l'image ou la vidéo est zoomée */
+.zoom-picture input:checked ~ .zoom-background,
+.zoom-video input:checked ~ .zoom-background {
+    display: block;
+}
+
+/* Style du conteneur zoom image */
+.zoom-picture {
+    position: relative;
+    cursor: zoom-in;
+}
+
+/* Style image zoomée quand checkbox cochée */
+.zoom-picture input:checked + .zoom-background + img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    height: auto;
+    max-height: 90vh;
+    z-index: 2000;
+    border-radius: 1vh;
+    background: white;
+    cursor: zoom-out;
+}
+
+/* Miniatures vidéo sticky en haut */
+.zoom-video video:not(.zoomed) {
+    position: sticky;
+    top: 0;
+    cursor: zoom-in;
+}
+
+/* Style vidéo zoomée */
+.zoomed {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-height: 90vh;
+    border-radius: 1vh;
+    z-index: 2000;
+    cursor: zoom-out;
+}
+
+/* Affiche la vidéo zoomée quand la checkbox est cochée */
+.zoom-video input:checked ~ .zoomed {
+    display: block;
+}
+
+/* Cache la miniature vidéo quand zoom activé */
+.zoom-video input:checked video:not(.zoomed) {
+    display: none;
+}
+
+/* Style du footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1vh;
+    font-size: 0.8rem;
+}
+
+/* Responsive : styles pour petits écrans */
+@media (max-width: 800px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .bouton {
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 2.5rem;
     }
 
     .menu-form {
-        margin: 30vh auto; /* Plus grande marge verticale */
-        font-size: 1rem; /* Taille de police normale */
+        margin: 30vh auto;
+        font-size: 1rem;
     }
 }
