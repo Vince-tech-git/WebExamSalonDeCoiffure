@@ -2,21 +2,27 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact</title>
-  <link rel="stylesheet" href="../css/Formulaire.css" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <title>
+    Contact
+  </title>
+  <link rel="stylesheet"
+        href="../css/Formulaire.css" />
 </head>
 <body>
-
+<!-- Header -->
 <header>
-  <h1>Formulaire de contact</h1>
+  <h1>Formulaire de contact</h1> <!-- Titre en haut -->
 
-  <input type="checkbox" id="menu-toggle" hidden>
-  <label for="menu-toggle" class="menu-btn">☰ Menu</label>
+  <!-- Bouton du menu -->
+  <input type="checkbox" id="menu-toggle" hidden />
+  <label for="menu-toggle" class="bouton">☰ Menu</label>
 
-  <div class="menu-popup">
+  <!-- Menu déroulant -->
+  <div class="popup">
     <div class="menu-form">
-      <label for="menu-toggle" class="close-btn">✖</label>
+      <label for="menu-toggle" class="close" aria-label="Fermer le menu">✖</label>
       <ul>
         <li><a href="Accueil.html">Accueil</a></li>
         <li><a href="Diaporama.html">Diaporama</a></li>
@@ -25,41 +31,78 @@
   </div>
 </header>
 
+<!-- Main -->
 <main>
-  <section class="form-container">
-    <form>
+  <!-- Section -->
+  <section >
+    <!-- Formulaire -->
+    <form method="post" >
       <div>
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required>
+        <label for="nom">
+          Nom :
+        </label>
+        <input type="text"
+               id="nom"
+               name="nom"
+               required>
       </div>
       <div>
-        <label for="prenom">Prénom :</label>
-        <input type="text" id="prenom" name="prenom" required>
+        <label for="prenom">
+          Prénom :
+        </label>
+        <input type="text"
+               id="prenom"
+               name="prenom"
+               required>
       </div>
       <div>
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required>
+        <label for="email">
+          Email :
+        </label>
+        <input type="email"
+               id="email"
+               name="email"
+               required>
       </div>
       <div>
-        <label for="objet">Objet :</label>
-        <input type="text" id="objet" name="objet">
+        <label for="objet">
+          Objet :
+        </label>
+        <input type="text"
+               id="objet"
+               name="objet">
       </div>
       <div>
-        <label for="message">Message :</label>
-        <textarea id="message" name="message" required></textarea>
+        <label for="message">
+          Message :
+        </label>
+        <textarea id="message"
+                  name="message"
+                  required>
+        </textarea>
       </div>
-
+      <!-- Submit -->
       <div>
-        <button type="submit">Envoyer</button>
+        <button type="submit">
+          Envoyer
+        </button>
       </div>
     </form>
   </section>
 </main>
-<audio autoplay loop>
-  <source src="../asset/audio/audio3.mp3" type="audio/mpeg">
+
+<!-- Audio de fond -->
+<audio autoplay
+       loop>
+  <source src="../asset/audio/audio3.mp3"
+          type="audio/mpeg">
 </audio>
+
+<!-- Footer -->
 <footer>
-  <p>&copy; 2025 By Kohnen V</p>
+  <p>
+    &copy;2025 By Kohnen V
+  </p>
 </footer>
 
 </body>

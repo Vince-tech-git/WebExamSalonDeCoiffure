@@ -1,4 +1,4 @@
-/* RESET + BASE */
+/* === Réinitialisation et styles de base === */
 * {
     margin: 0;
     padding: 0;
@@ -10,181 +10,153 @@ body {
     font-family: sans-serif;
     background-color: ivory;
     color: black;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 60px;
 }
 
+/* === Header === */
 h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    margin-bottom: 2vh; /* Choisis 2vh ou ajuste si besoin */
 }
 
-/* HEADER */
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1vh;
+    background-color: ivory;
     z-index: 1000;
+    padding: 3vh 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* MENU POPUP */
+/* === Bouton du menu === */
 .bouton {
-    position: absolute;
-    top: 2vh;
-    right: 2vh;
+    font-size: 2rem;
     color: black;
-    padding: 1vh 1vh;
-    font-size: 1.5rem;
     cursor: pointer;
-    border-radius: 5vh;
+    background: none;
+    border: none;
 }
 
+/* === Menu popup pleine page === */
 .popup {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.6);
+    padding: 0 25vw;
+    background: rgba(0, 0, 0, 0.8);
     display: none;
     z-index: 999;
 }
 
-.form {
-    background: ivory;
-    width: 80%;
-    margin: 20vh auto;
-    padding: 2vh;
-    border-radius: 1vh;
+/* === Contenu du menu (fond clair) === */
+.menu-form {
+    background-color: ivory;
+    padding: 3vh;
+    border-radius: 2vh;
 }
 
-.form ul {
+/* === Liste des liens du menu === */
+ul {
     list-style: none;
-    padding: 0;
 }
 
-.form ul li {
+li {
     margin: 2vh 0;
 }
 
-.form ul li a {
+a {
+    color: black;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 2rem;
 }
 
+/* === Bouton de fermeture du menu === */
 .close {
-    font-size: 2vh;
     float: right;
+    font-size: 2rem;
     cursor: pointer;
 }
 
-#menu-toggle:checked + .bouton + .popup {
+/* === Affichage du menu quand activé === */
+#menu-toggle:checked ~ .popup {
     display: block;
 }
 
-/* FORMULAIRE */
-form {
-    width: 90%;
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: gray;
-    padding: 2vh;
-    border-radius: 1vh;
-    box-shadow: 0 0 2vh rgba(0,0,0,0.3);
+/* === Section principale === */
+section {
+    padding-top: 25vh;
+    padding-bottom: 10vh;
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-form div {
-    margin-bottom: 2vh;
+/* === Formulaire de contact === */
+form {
+    width: 90%;
+    max-width: 60rem;
+    background-color: #6c543a;
+    padding: 3vh;
+    border-radius: 1vh;
+}
+
+/* === Label du formulaire === */
+label {
+    padding: 1vh;
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
     text-align: left;
 }
 
-label {
-    display: block;
-    margin-bottom: 1vh;
-    font-weight: bold;
-}
-
-input, textarea {
+/* === Champs de saisie et textarea === */
+input,
+textarea {
     width: 100%;
-    padding: 1vh;
-    border-radius: 5vh;
-    border: 1px solid #aaa;
+    padding: 1.5vh 2vh;
+    border-radius: 1vh;
     background-color: ivory;
+    font-size: 1.1rem;
+    border: none;
 }
 
 textarea {
-    min-height: 5vh;
-    max-height: 15vh;
+    min-height: 6vh;
+    max-height: 20vh;
     resize: vertical;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 textarea:focus {
-    min-height: 20vh;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    border-color: #444;
+    min-height: 25vh;
 }
 
+/* === Bouton Envoyer === */
 button[type="submit"] {
     background-color: ivory;
-    padding: 1vh 2vh;
-    border-radius: 5vh;
-    border: 1px solid #aaa;
-    font-weight: bold;
+    padding: 1.5vh 3vh;
+    border-radius: 1vh;
+    font-size: 1.2rem;
     cursor: pointer;
-
-    display: block;           /* le bouton devient un bloc */
-    margin: 2vh auto 0 auto;  /* centré horizontalement */
-    text-align: center;       /* centrer le texte si nécessaire */
+    display: block;
+    margin: 2vh auto 0 auto;
+    text-align: center;
 }
 
-/* FOOTER */
+/* === Footer === */
 footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    text-align: center;
-    padding: 1vh;
+    padding: 1.5vh;
     background-color: ivory;
-    font-size: 0.8rem;
+    text-align: center;
+    font-size: 1rem;
 }
 
-/* MOBILE < 600px */
-@media (max-width: 800px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    .bouton {
-        width: 100%;
-        font-size: 1.2rem;
-        padding: 2.5rem;
-    }
-
-    .form {
-        width: 90%;
-        margin: 30vh auto;
-        font-size: 1rem;
-    }
-
-    form {
-        width: 95%;
-        padding: 2vh;
-        box-shadow: 0 0 1vh rgba(0,0,0,0.2);
-    }
-
-    input, textarea {
-        font-size: 1rem;
-    }
-
-    button[type="submit"] {
-        font-size: 1rem;
-        padding: 1vh;
-    }
-
-    footer {
-        font-size: 0.7rem;
-    }
-}
